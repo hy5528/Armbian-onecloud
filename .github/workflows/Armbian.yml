@@ -5,9 +5,9 @@ jobs:
   build-armbian:
     runs-on: ubuntu-latest
     steps:
-      - uses: mofeng-git/build@main
+      - uses: TooYoungTooSimp/s805-armbian-build@master
         with:
           armbian_token:     "${{ secrets.GITHUB_TOKEN }}"  # GitHub token
           armbian_release:   "jammy"                        # userspace
-          armbian_target:    "build"                        # build=image, kernel=kernel
+          armbian_target:    "s805-armbian-build"                        # build=image, kernel=kernel
           armbian_board:     "onecloud"                   # build target

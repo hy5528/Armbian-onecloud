@@ -5,7 +5,7 @@ jobs:
   build-armbian:
     runs-on: ubuntu-latest
     steps:
-      - uses: mofeng-git/Build-Armbian@main
+      - uses: hy5528/s805-armbian-build@master
         with:
           armbian_token:     "${{ secrets.GITHUB_TOKEN }}"  # GitHub token
           armbian_release:   "jammy"                        # userspace

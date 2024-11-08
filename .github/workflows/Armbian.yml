@@ -7,13 +7,11 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - name: Maximize build space
-        uses: easimon/maximize-build-space@master
       - name: install dep
         run: |
           sudo apt-get update
           sudo apt-get install -y curl jq gpg python3-pyquery wget xz-utils make gcc-arm-linux-gnueabihf flex bison dpkg-dev bc rsync kmod cpio libssl-dev git lsb vim libelf-dev neofetch python3-pip python3-tk debhelper zstd dpkg-sig mmdebstrap qemu-user-static usrmerge binfmt-support systemd-container
-      
+      - uses: mofeng-git/build@main
         with:
           armbian_token:     "${{ secrets.GITHUB_TOKEN }}"  # GitHub token
           armbian_release:   "jammy"                        # userspace

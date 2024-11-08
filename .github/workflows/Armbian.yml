@@ -11,7 +11,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y curl jq gpg python3-pyquery wget xz-utils make gcc-arm-linux-gnueabihf flex bison dpkg-dev bc rsync kmod cpio libssl-dev git lsb vim libelf-dev neofetch python3-pip python3-tk debhelper zstd dpkg-sig mmdebstrap qemu-user-static usrmerge binfmt-support systemd-container
-      - uses: mofeng-git/build@main
+      - uses: mofeng-git/Build-Armbian@main
         with:
           armbian_token:     "${{ secrets.GITHUB_TOKEN }}"  # GitHub token
           armbian_release:   "jammy"                        # userspace

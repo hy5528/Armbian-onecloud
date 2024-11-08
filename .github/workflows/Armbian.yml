@@ -24,5 +24,5 @@ jobs:
         with:
           armbian_token:     "${{ secrets.GITHUB_TOKEN }}"  # GitHub token
           armbian_release:   "jammy"                        # userspace
-          armbian_target:    "build"                        # build=image, kernel=kernel
+          armbian_target:    "Build-Armbian"                        # build=image, kernel=kernel
           armbian_board:     "aml-s812"                   # build target
